@@ -11,4 +11,4 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositorie
       && sh build.sh \
       && cd .. \
       && rm master.zip
-CMD ["/root/net-speeder-master/net_speeder","eth0","\"ip\"]
+CMD ["/root/net-speeder-master/net_speeder","eth0","\"ip\""]
