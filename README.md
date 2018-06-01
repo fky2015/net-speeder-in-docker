@@ -13,6 +13,7 @@ docker build -t your-image-tag .
 本项目将原有的net-speeder容器化，利用host网络模式来实现对网卡加速
 ## 使用方法
 ```
-docker run -d your-image-tag 
+docker run -d --network host your-image-tag
 ```
+注意network必须设置为host
 ## 其他

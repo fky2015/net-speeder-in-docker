@@ -12,3 +12,4 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositorie
       && cd .. \
       && rm master.zip
 CMD ["/root/net-speeder-master/net_speeder","eth0","ip"]
+ENTRYPOINT ["/root/net-speeder-master/net_speeder"]
