@@ -1,4 +1,5 @@
 FROM alpine:3.6
+MAINTAINER FKY
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories \
       && apk update \
       && apk upgrade \
@@ -10,3 +11,4 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositorie
       && sh build.sh \
       && cd .. \
       && rm master.zip
+CMD ["/root/net-speeder-master/net"]
