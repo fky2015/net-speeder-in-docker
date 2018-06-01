@@ -6,4 +6,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositorie
       && cd \
       && wget --no-check-certificate https://github.com/snooda/net-speeder/archive/master.zip \
       && unzip master.zip \
-      && sh net-speeder-master/build.sh
+      && cd net-speeder-master \
+      && sh build.sh \
+      && cd .. \
+      && rm master.zip
